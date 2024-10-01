@@ -113,7 +113,7 @@ jobs:
           if [[ $OS =~ ^ubuntu.*$ && $TARGET =~ ^mips.*$ ]]; then
             cargo +nightly build -r --verbose --target $TARGET -Z build-std=std,panic_abort --no-default-features --features mips
           else
-            cargo build --release --verbose --target $TARGET
+            cargo build --release --verbose --target $TARGET --features full
           fi
 
       # Copied and slightly modified from @lmq8267 (https://github.com/lmq8267)
